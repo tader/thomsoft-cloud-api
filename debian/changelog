@@ -1,0 +1,45 @@
+thomsoft-cloud-api (0.1-thomsoft-cloud-4.4) lenny squeeze lucid maverick; urgency=low
+
+  * Removed rpaf
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Fri, 18 Feb 2011 00:30:31 +0100
+
+thomsoft-cloud-api (0.1-thomsoft-cloud-4.3) lenny squeeze lucid maverick; urgency=low
+
+  * Added libapache2-mod-php5 as dependencie.
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Mon, 17 Jan 2011 15:50:12 +0100
+
+thomsoft-cloud-api (0.1-thomsoft-cloud-4.2) lenny squeeze lucid maverick; urgency=low
+
+  * Added support Debian Squeeze.
+  * Added support Ubuntu Lucid.
+  * Added support Ubuntu Maverick.
+  * Removed ServerAdmin and ServerName directives from httpd.conf.
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Mon, 17 Jan 2011 15:24:44 +0100
+
+thomsoft-cloud-api (0.1-thomsoft-cloud-4.1) lenny; urgency=low
+
+  * Added log directory. 
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Thu, 08 Apr 2010 20:00:29 +0200
+
+thomsoft-cloud-api (0.1-thomsoft-cloud-4) lenny; urgency=low
+
+  * Added dependency
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Tue, 2 Mar 2010 12:06:12 +0000
+
+thomsoft-cloud-api (0.1-thomsoft-cloud-2) lenny; urgency=low
+
+  * Added init.d script
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Tue, 2 Mar 2010 12:06:10 +0000
+
+thomsoft-cloud-api (0.1-thomsoft-cloud-1) lenny; urgency=low
+
+  * Initial Debianized Version
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Tue, 2 Mar 2010 12:06:00 +0000
+

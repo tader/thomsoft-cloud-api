@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+if [ "$1" != "configure" ]; then
+        exit 0
+fi
+
+adduser --system thomsoft-cloud-api
+addgroup --system thomsoft-cloud-api
+update-rc.d thomsoft-cloud-api defaults
+
+if [ -x "/etc/init.d/thomsoft-cloud-api" ]; then
+        if [ -x /usr/sbin/invoke-rc.d ]; then
+                invoke-rc.d thomsoft-cloud-api start ||true
+        else
+                /etc/init.d/thomsoft-cloud-api start ||true
+        fi
+fi
+
+
+
+exit 0

@@ -1,0 +1,9 @@
+Package: thomsoft-cloud-api
+Version: 0.1-thomsoft-cloud-4.3
+Architecture: all
+Maintainer: Thomas A. de Ruiter <thomas@de-ruiter.cx>
+Installed-Size: 84
+Depends: libapache2-mod-php5, libthomsoft-webservice-php (>= 0.1-thomsoft-cloud-3), thomsoft-cloud-api-node
+Section: web
+Priority: extra
+Description: API Webserver for Thomsoft Cloud

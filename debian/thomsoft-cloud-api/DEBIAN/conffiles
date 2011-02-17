@@ -1,0 +1,2 @@
+/etc/thomsoft-cloud/api/httpd.conf
+/etc/init.d/thomsoft-cloud-api
