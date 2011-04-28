@@ -1,3 +1,9 @@
+thomsoft-cloud-api (11.4.28-alpha2) lenny squeeze lucid maverick; urgency=low
+
+  * Getting it to start...
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Thu, 28 Apr 2011 17:03:26 +0200
+
 thomsoft-cloud-api (11.4.28-alpha1) lenny squeeze lucid maverick; urgency=low
 
   * Change to new build system

@@ -5,6 +5,7 @@
 case "$1" in
 	purge)
         rm -rf /var/log/thomsoft-cloud/api
+        rm -rf /etc/thomsoft-cloud/api
 		;;
 	*)
 		;;

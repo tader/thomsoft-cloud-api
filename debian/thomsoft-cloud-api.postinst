@@ -18,15 +18,15 @@ fi
 
 update-rc.d thomsoft-cloud-api defaults
 
-if [ ! -x "/etc/init.d/thomsoft-cloud-api" ]; then
-    chmod a+x /etc/init.d/thomsoft-cloud-api
-fi
+#if [ -x "/etc/init.d/thomsoft-cloud-api" ]; then
+#    if [ -x /usr/sbin/invoke-rc.d ]; then
+#        invoke-rc.d thomsoft-cloud-api start ||true
+#    else
+#        /etc/init.d/thomsoft-cloud-api start ||true
+#    fi
+#fi
 
-if [ -x /usr/sbin/invoke-rc.d ]; then
-    invoke-rc.d thomsoft-cloud-api start ||true
-else
-    /etc/init.d/thomsoft-cloud-api start ||true
-fi
+echo "Run: /etc/init.d/thomsoft-cloud-api start"
 
 exit 0
 
