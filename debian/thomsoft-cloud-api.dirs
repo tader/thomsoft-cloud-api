@@ -1,3 +1,4 @@
 /etc/init.d
 /etc/thomsoft-cloud/api
 /var/log/thomsoft-cloud/api
+/usr/share/thomsoft-cloud/api

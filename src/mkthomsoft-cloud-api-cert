@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# based on courier-imap-ssl code
+
+if test -f /etc/thomsoft-cloud/api/certificate.pem
+then
+	echo "/etc/thomsoft-cloud/api/certificate.pem already exists."
+	exit 1
+fi
+
+umask 077
+
+cleanup() {
+	rm -f /etc/thomsoft-cloud/api/certificate.pem
+	rm -f /etc/thomsoft-cloud/api/certificate.rand
+	rm -f /etc/thomsoft-cloud/api/certificate.key
+	rm -f /etc/thomsoft-cloud/api/certificate.cert
+	exit 1
+}
+
+cd /etc/thomsoft-cloud/api
+
+cp /dev/null /etc/thomsoft-cloud/api/certificate.pem
+chmod 600 /etc/thomsoft-cloud/api/certificate.pem
+chown thomsoft-cloud-api /etc/thomsoft-cloud/api/certificate.pem
+
+dd if=/dev/urandom of=/etc/thomsoft-cloud/api/certificate.rand count=1 2>/dev/null
+openssl req -new -x509 -days 365 -nodes \
+      -config /usr/share/thomsoft-cloud/api/thomsoft-cloud-api.cnf -out /etc/thomsoft-cloud/api/certificate.pem -keyout /etc/thomsoft-cloud/api/certificate.pem || cleanup
+openssl gendh -rand /etc/thomsoft-cloud/api/certificate.rand 512 >>/etc/thomsoft-cloud/api/certificate.pem || cleanup
+openssl x509 -subject -dates -fingerprint -noout -in /etc/thomsoft-cloud/api/certificate.pem || cleanup
+rm -f /etc/thomsoft-cloud/api/certificate.rand

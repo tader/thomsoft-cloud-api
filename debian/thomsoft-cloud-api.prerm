@@ -1,0 +1,27 @@
+#!/bin/sh -e
+
+#DEBHELPER#
+
+case "$1" in
+	remove)
+        if [ -x "/etc/init.d/thomsoft-cloud-api" ]; then
+            if [ -x /usr/sbin/invoke-rc.d ]; then
+                    invoke-rc.d thomsoft-cloud-api stop || true
+            else
+                    /etc/init.d/thomsoft-cloud-api stop || true
+            fi
+        fi
+		;;
+	upgrade)
+        if [ -x "/etc/init.d/thomsoft-cloud-api" ]; then
+            if [ -x /usr/sbin/invoke-rc.d ]; then
+                    invoke-rc.d thomsoft-cloud-api stop || true
+            else
+                    /etc/init.d/thomsoft-cloud-api stop || true
+            fi
+        fi
+		;;
+	*)
+		;;
+esac
+

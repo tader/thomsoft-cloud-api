@@ -1,22 +1,33 @@
 #!/bin/sh
 set -e
 
+. /usr/share/debconf/confmodule
+
+#DEBHELPER#
+
 if [ "$1" != "configure" ]; then
         exit 0
 fi
 
-adduser --system thomsoft-cloud-api
-addgroup --system thomsoft-cloud-api
-update-rc.d thomsoft-cloud-api defaults
+getent passwd thomsoft-cloud-api >/dev/null 2>&1 || adduser  --system thomsoft-cloud-api
+getent group  thomsoft-cloud-api >/dev/null 2>&1 || addgroup --system thomsoft-cloud-api
 
-if [ -x "/etc/init.d/thomsoft-cloud-api" ]; then
-        if [ -x /usr/sbin/invoke-rc.d ]; then
-                invoke-rc.d thomsoft-cloud-api start ||true
-        else
-                /etc/init.d/thomsoft-cloud-api start ||true
-        fi
+if [ ! -f /etc/thomsoft-cloud/api/certificate.pem ]; then
+    /usr/sbin/mkthomsoft-cloud-api-cert
 fi
 
-#DEBHELPER#
+update-rc.d thomsoft-cloud-api defaults
+
+if [ ! -x "/etc/init.d/thomsoft-cloud-api" ]; then
+    chmod a+x /etc/init.d/thomsoft-cloud-api
+fi
+
+if [ -x /usr/sbin/invoke-rc.d ]; then
+    invoke-rc.d thomsoft-cloud-api start ||true
+else
+    /etc/init.d/thomsoft-cloud-api start ||true
+fi
 
 exit 0
+
+

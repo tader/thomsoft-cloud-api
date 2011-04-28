@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+#DEBHELPER#
+
+case "$1" in
+	purge)
+        rm -rf /var/log/thomsoft-cloud/api
+		;;
+	*)
+		;;
+esac
+

@@ -2,10 +2,11 @@ Source: thomsoft-cloud-api
 Section: web
 Priority: extra
 Maintainer: Thomas A. de Ruiter <thomas@de-ruiter.cx>
-Build-Depends: debhelper (>= 6), quilt
+Build-Depends: cdbs, debhelper (>= 7), config-package-dev
 Standards-Version: 3.8.0
 
 Package: thomsoft-cloud-api
 Architecture: all
-Depends: libapache2-mod-php5, libthomsoft-webservice-php (>= 0.1-thomsoft-cloud-3), thomsoft-cloud-api-node
+Depends: libapache2-mod-php5, libthomsoft-webservice-php
+Suggests: thomsoft-cloud-api-node
 Description: API Webserver for Thomsoft Cloud
