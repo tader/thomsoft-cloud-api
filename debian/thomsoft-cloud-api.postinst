@@ -9,8 +9,18 @@ if [ "$1" != "configure" ]; then
         exit 0
 fi
 
-getent passwd thomsoft-cloud-api >/dev/null 2>&1 || adduser  --system thomsoft-cloud-api
-getent group  thomsoft-cloud-api >/dev/null 2>&1 || addgroup --system thomsoft-cloud-api
+getent group  thomsoft-cloud-api >/dev/null 2>&1 || \
+    addgroup \
+        --system \
+        thomsoft-cloud-api
+
+getent passwd thomsoft-cloud-api >/dev/null 2>&1 || \
+    adduser  \
+        --system \
+        --ingroup thomsoft-cloud-api \
+        --no-create-home \
+        --disabled-password \
+        thomsoft-cloud-api
 
 if [ ! -f /etc/thomsoft-cloud/api/certificate.pem ]; then
     /usr/sbin/mkthomsoft-cloud-api-cert

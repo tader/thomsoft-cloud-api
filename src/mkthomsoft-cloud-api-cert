@@ -26,7 +26,7 @@ chown thomsoft-cloud-api /etc/thomsoft-cloud/api/certificate.pem
 
 dd if=/dev/urandom of=/etc/thomsoft-cloud/api/certificate.rand count=1 2>/dev/null
 openssl req -new -x509 -days 365 -nodes \
-      -config /usr/share/thomsoft-cloud/api/thomsoft-cloud-api.cnf -out /etc/thomsoft-cloud/api/certificate.pem -keyout /etc/thomsoft-cloud/api/certificate.pem || cleanup
+      -config /usr/share/thomsoft-cloud/thomsoft-cloud-api.cnf -out /etc/thomsoft-cloud/api/certificate.pem -keyout /etc/thomsoft-cloud/api/certificate.pem || cleanup
 openssl gendh -rand /etc/thomsoft-cloud/api/certificate.rand 512 >>/etc/thomsoft-cloud/api/certificate.pem || cleanup
 openssl x509 -subject -dates -fingerprint -noout -in /etc/thomsoft-cloud/api/certificate.pem || cleanup
 rm -f /etc/thomsoft-cloud/api/certificate.rand

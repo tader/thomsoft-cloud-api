@@ -1,4 +1,4 @@
 src/httpd.conf                /etc/thomsoft-cloud/api
 src/thomsoft-cloud-api        /etc/init.d
 src/mkthomsoft-cloud-api-cert /usr/sbin
-src/thomsoft-cloud-api.cnf    /usr/share/thomsoft-cloud/api
+src/thomsoft-cloud-api.cnf    /usr/share/thomsoft-cloud

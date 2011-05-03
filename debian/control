@@ -7,6 +7,6 @@ Standards-Version: 3.8.0
 
 Package: thomsoft-cloud-api
 Architecture: all
-Depends: libapache2-mod-php5, libthomsoft-webservice-php
+Depends: debconf, libapache2-mod-php5, libthomsoft-webservice-php
 Suggests: thomsoft-cloud-api-node
 Description: API Webserver for Thomsoft Cloud
