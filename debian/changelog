@@ -1,3 +1,9 @@
+thomsoft-cloud-api (11.5.3-rc3) lenny squeeze lucid maverick natty oneiric; urgency=low
+
+  * Just adding more distributions.
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Mon, 31 Oct 2011 18:09:56 +0100
+
 thomsoft-cloud-api (11.5.3-rc2) lenny squeeze lucid maverick; urgency=low
 
   * Options -Indexes
