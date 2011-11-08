@@ -1,4 +1,4 @@
-thomsoft-cloud-api (11.5.3-rc3) lenny squeeze lucid maverick natty oneiric; urgency=low
+thomsoft-cloud-api (11.11.1) lenny squeeze lucid maverick natty oneiric; urgency=low
 
   * Just adding more distributions.
 
@@ -9,24 +9,9 @@ thomsoft-cloud-api (11.5.3-rc2) lenny squeeze lucid maverick; urgency=low
   * Options -Indexes
   * init.d script not killing normal apache2
   * Move cnf out of webroot
-
- -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Tue, 03 May 2011 16:00:43 +0200
-
-thomsoft-cloud-api (11.4.28-alpha2) lenny squeeze lucid maverick; urgency=low
-
   * Getting it to start...
-
- -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Thu, 28 Apr 2011 17:03:26 +0200
-
-thomsoft-cloud-api (11.4.28-alpha1) lenny squeeze lucid maverick; urgency=low
-
   * Change to new build system
   * Add SSL certificate generation
-
- -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Thu, 28 Apr 2011 15:40:15 +0200
-
-thomsoft-cloud-api (0.1-thomsoft-cloud-4.4) lenny squeeze lucid maverick; urgency=low
-
   * Del rpaf
 
  -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Fri, 18 Feb 2011 00:30:31 +0100
